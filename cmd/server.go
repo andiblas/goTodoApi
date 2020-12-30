@@ -2,10 +2,10 @@ package main
 
 import "net/http"
 
-type Server struct {
-	Router	*http.ServeMux
+type TodoServer struct {
+	Router *http.ServeMux
 }
 
-func NewServer(router *http.ServeMux) *Server {
-	return &Server{Router: router}
+func NewTodoServer(router *http.ServeMux) *TodoServer {
+	return &TodoServer{Router: router}
 }

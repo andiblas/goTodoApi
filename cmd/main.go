@@ -8,8 +8,8 @@ import (
 func main() {
 	router := http.NewServeMux()
 
-	myServer := NewServer(router)
+	myServer := NewTodoServer(router)
 	myServer.routes()
 
-	log.Fatal(http.ListenAndServe(":8080", router))
+	log.Fatal(http.ListenAndServe(":8080", myServer.Router))
 }
